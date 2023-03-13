@@ -1,0 +1,23 @@
+<div class="conatainer">
+  <div class="row">
+    <div class="col-md-12">
+      <button (click)="onAddUser()">Add User</button>
+    </div>
+  </div>
+  <div class="my-2">{{ appStatus | async }}</div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" class="form-control" [(ngModel)]="filterdStr" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let user of users | filter : filterdStr" class="my-3">
+        <div>Name: {{ user.userName | sharten : 2 }}</div>
+        <div>
+          Joined Date: {{ user.joinedDate | date : "fullDate" | uppercase }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

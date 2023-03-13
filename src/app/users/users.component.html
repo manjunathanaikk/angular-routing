@@ -1,0 +1,45 @@
+<!-- <p>users works!</p>
+<div>
+  <button (click)="goToCategories()">Go to Categories</button>
+</div>
+
+<a
+  [routerLink]="['/users', 1, 'Manju1']"
+  [queryParams]="{ page: 1, search: 'Manju' }"
+  [fragment]="'load'"
+  >Get Details Of manju</a
+> -->
+
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <a
+      [routerLink]="['/users', 1, 'Ramma']"
+      [queryParams]="{ page: 1, search: 'Ramma' }"
+      class="nav-link"
+      >Get Rama Details</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      [routerLink]="['/users', 2, 'Krishna']"
+      class="nav-link"
+      [queryParams]="{ page: 2, search: 'Krishna' }"
+      >Get Krishna Details</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      [routerLink]="['/users', 3, 'Manju']"
+      class="nav-link"
+      [queryParams]="{ page: 3, search: 'Manju' }"
+      >Get Manju Details</a
+    >
+  </li>
+</ul>
+
+<div>
+  <button class="btn btn-primary" (click)="onAddUsers()">Add Users</button>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
